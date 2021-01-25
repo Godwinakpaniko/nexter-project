@@ -1,0 +1,61 @@
+.footer {
+    background-color: $color-secondary;
+    grid-column: full-start/ full-end;
+    padding: 8rem;
+}
+
+
+
+.nav {
+
+    background-color: $color-secondary;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 1rem;
+
+
+
+    /// ensure you also try flexbox to run this thinggy
+
+
+
+    &__item {
+        list-style: none;
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.4rem;
+        text-align: center;
+        text-transform: capitalize;
+        padding: 1.5rem;
+        display: block;
+        font-family: $font-display;
+
+        
+    }
+
+    &__link:hover,
+    &__link:active {
+        background-color: rgba(#fff, .05);
+        -webkit-transform: translateY(-3px);
+            -ms-transform: translateY(-3px);
+                transform: translateY(-3px);
+    }
+
+    
+
+}
+
+.copyright {
+    font-size: 1.4rem;
+    color: #aaa;
+    margin-top: 4rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 70%;
+}

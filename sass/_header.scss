@@ -1,0 +1,83 @@
+
+
+.header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba($color-secondary, .93)), to(rgba($color-secondary, .93))), url(../img/hero.jpeg);
+    background-image: -o-linear-gradient(rgba($color-secondary, .93), rgba($color-secondary, .93)), url(../img/hero.jpeg);
+    background-image: linear-gradient(rgba($color-secondary, .93), rgba($color-secondary, .93)), url(../img/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    grid-column: full-start / col-end 6;
+
+
+    padding: 8rem;
+    padding-top: 4rem;
+    display: grid;
+    grid-template-rows: 1fr -webkit-min-content minmax(6rem, -webkit-min-content) 1fr;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+    grid-template-columns: minmax(-webkit-min-content, -webkit-max-content);
+    grid-template-columns: minmax(min-content, max-content);
+    grid-row-gap: 1.5rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+
+    @media (max-width: $bp-800) {
+        grid-column: 1 / -1;
+    }
+
+    @media (max-width: $bp-600) {
+        padding: 5rem;
+        padding-top: 3rem;
+    }
+
+
+    .logo {
+        height: 3rem;
+        justify-self: center;
+    }
+
+}
+
+.header__seenon-text {
+    display: grid;
+    grid-template-columns: 1fr -webkit-max-content 1fr;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1.6rem;
+    color: #aaa;
+}
+
+.header__seenon-text::before, .header__seenon-text::after {
+    content: "";
+    height: 1px;
+    display: block;
+    background-color: currentColor;
+}
+
+.header__seenon-logos img {
+    max-height: 2.5rem;
+    max-width: 100%;
+    -webkit-filter: brightness(70%);
+            filter: brightness(70%); 
+}
+
+.header__seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3rem;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;}
+
+
+.header__btn {
+    -ms-flex-item-align: start;
+        align-self: start;
+    justify-self: start;
+}
+
